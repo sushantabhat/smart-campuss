@@ -1,9 +1,10 @@
 import express from 'express';
-import doteenv from 'dotenv';
-import connectDB from './db.js';
+import dotenv from 'dotenv';
+import { connectDB } from './db/connectDB.js';
 
 const app = express();
-doteenv.config();
+
+dotenv.config();
 
 app.get("/", (req, res) => {
   res.send("Hello Worlddd!");
